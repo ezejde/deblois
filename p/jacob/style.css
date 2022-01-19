@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Pushster&family=Shizuru&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+/*
+
+header - font-family: 'Playfair Display', serif;
+normal - font-family: 'Pushster', cursive;
+small - font-family: 'Shizuru', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+*/
+
+/* global styling */
+a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+a:hover::before {
+  transform: scaleX(1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  /* overflow: hidden; */
+
+  background-color: #f1cf63;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+}
+
+.blur {
+  background-size: cover;
+  overflow: hidden;
+  filter: blur(13px);
+  position: absolute;
+  height: 300px;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+}
+
+/* header stuff */
+#header {
+  width: 100vw;
+  height: 250;
+
+  top: 0;
+  left: 0;
+
+  position: fixed;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#header > h1 {
+  padding-left: 10px;
+
+  /* border-right: 1px solid #333; */
+}
+
+.nav {
+  margin: 0;
+  margin-top: -50px;
+
+  padding: 0;
+
+  width: 85%;
+
+  float: right;
+
+  display: block;
+
+  list-style-type: none;
+}
+.nav > li {
+  float: left;
+
+  font-family: Lato, serif;
+
+  padding-right: 10px;
+}
+
+/* content */
+
+.flower {
+  height: 200px;
+  width: auto;
+
+  margin-top: -100px;
+}
+
+/* ml styling */
+.ml16 {
+  color: #402d2d;
+  padding: 40px 0;
+  font-weight: 800;
+  font-size: 2em;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.3em;
+  overflow: hidden;
+}
+
+.ml16 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+/* info */
+
+#info {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: #f1cf63;
+
+  margin: 0;
+  padding: 0;
+}
+
+#info > .side > h1 {
+  font-family: Lato, serif;
+  font-size: 1em;
+  padding: 0.5em 50px 1px;
+  line-height: 1em;
+  font-size: 7em;
+  font-weight: 100;
+}
+#info > .side > .fullname {
+  font-family: Source Sans Pro, sans-serif;
+  letter-spacing: 0.4em;
+  padding-left: 50px;
+  margin-top: -75px;
+}
+#info > .side > .contacts {
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.3em;
+  padding-left: 50px;
+}
+#info > .side > .descript {
+  width: 325px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding-left: 50px;
+  /* margin-top: -75px; */
+}
+#info > .side > .linking {
+  width: 325px;
+  text-align: center;
+  font-family: Source Sans Pro, sans-serif;
+  padding-left: 50px;
+  /* margin-top: -75px; */
+}
+#info > .side > .link {
+  width: 325px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding-left: 50px;
+  /* margin-top: -75px; */
+}
+
+#info > .icon > img {
+  width: 300px;
+  height: auto;
+
+  border: 2px solid #1a1a1a;
+
+  margin: -750px 400px 50px;
+}
+
+/* */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+  /* Base font size */
+  /* font-size: 10px; */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  /* background-color: #fafafa; */
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+.heading {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  padding: 3.5rem 0;
+  color: #1a1a1a;
+}
+
+.heading span {
+  display: block;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /* Compensate for excess margin on outer gallery flex items */
+  margin: -1rem -1rem;
+}
+
+.gallery-item {
+  /* Minimum width of 24rem and grow to fit available space */
+  flex: 1 0 24rem;
+  /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+  margin: 1rem;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+  transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-gap: 2rem;
+  }
+
+  .gallery,
+  .gallery-item {
+    margin: 0;
+  }
+}
